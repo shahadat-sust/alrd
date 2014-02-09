@@ -1,0 +1,11 @@
+.report-form
+{
+    width: 100%;
+}
+.report-continer
+{
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 20px; 
+    min-height: 670px;
+}

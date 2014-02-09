@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67A5AC8B-D42C-4E47-A730-20009DC9A6F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HBM.Dao</RootNamespace>
+    <AssemblyName>HBM.Dao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\lib4.0\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseDao.cs" />
+    <Compile Include="Dao\ALRD_DistrictInfoDao.cs" />
+    <Compile Include="Dao\ALRD_DivisionInfoDao.cs" />
+    <Compile Include="Dao\ALRD_OrganizationDataDao.cs" />
+    <Compile Include="Dao\ALRD_OrganizationInfoDao.cs" />
+    <Compile Include="Dao\ALRD_UnionInfoDao.cs" />
+    <Compile Include="Dao\ALRD_UpazilaInfoDao.cs" />
+    <Compile Include="Dao\ALRD_UserInfoDao.cs" />
+    <Compile Include="Dao\ALRD_SecurityFormDao.cs" />
+    <Compile Include="Dao\ALRD_SecurityRoleDetailDao.cs" />
+    <Compile Include="Dao\ALRD_SecurityRoleDao.cs" />
+    <Compile Include="Dao\ALRD_SecurityUserDao.cs" />
+    <Compile Include="Dao\ALRD_SecurityUserRoleMappingDao.cs" />
+    <Compile Include="Dao\ALRD_SecurityMenuDao.cs" />
+    <Compile Include="Dao\ALRD_GovernmentForestryBodyDataDao.cs" />
+    <Compile Include="Dao\ALRD_GovernmentKhasLandDataDao.cs" />
+    <Compile Include="Dao\ALRD_GovernmentWaterBodyDataDao.cs" />
+    <Compile Include="Dao\Extension_ReportDao.cs" />
+    <Compile Include="Dao\Extension_CommonDao.cs" />
+    <Compile Include="IDao\IALRD_GovernmentForestryBodyDataDao.cs" />
+    <Compile Include="IDao\IALRD_GovernmentKhasLandDataDao.cs" />
+    <Compile Include="IDao\IALRD_GovernmentWaterBodyDataDao.cs" />
+    <Compile Include="IDao\IExtension_ReportDao.cs" />
+    <Compile Include="IDao\IALRD_SecurityUserRoleMappingDao.cs" />
+    <Compile Include="IDao\IALRD_SecurityUserDao.cs" />
+    <Compile Include="IDao\IALRD_SecurityRoleDao.cs" />
+    <Compile Include="IDao\IALRD_SecurityRoleDetailDao.cs" />
+    <Compile Include="IDao\IALRD_SecurityMenuDao.cs" />
+    <Compile Include="IDao\IALRD_SecurityFormDao.cs" />
+    <Compile Include="IDao\IALRD_UnionInfoDao.cs" />
+    <Compile Include="IDao\IALRD_UpazilaInfoDao.cs" />
+    <Compile Include="IDao\IALRD_UserInfoDao.cs" />
+    <Compile Include="IDao\IALRD_OrganizationInfoDao.cs" />
+    <Compile Include="IDao\IALRD_OrganizationDataDao.cs" />
+    <Compile Include="IDao\IALRD_DivisionInfoDao.cs" />
+    <Compile Include="IDao\IExtension_CommonDao.cs" />
+    <Compile Include="IDao\IALRD_DistrictInfoDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entity\SH.Entity.csproj">
+      <Project>{61FBB370-C812-4CC8-A9B8-37BF71198D8C}</Project>
+      <Name>SH.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

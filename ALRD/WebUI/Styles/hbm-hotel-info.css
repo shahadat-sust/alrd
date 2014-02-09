@@ -1,0 +1,62 @@
+﻿.hotel-search
+{
+    background-color:#ffffff;
+    width:27% !important;
+    float :left;
+    /*margin: 0 auto;*/
+    padding: 10px 10px 10px 10px;
+}
+  
+.hotel-list
+{
+    background-color:#ffffff;
+    width:67% !important;
+    float :left;
+    margin-left: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+.image-gallery
+{
+    float: left;
+    width: 60%;
+    background-color: Gray;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.image-basic-content
+{
+    float: left;
+    margin-left: 45px;
+    width: 33%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.d-hotel-name
+{
+    width: 100%;
+    font-family: Arial Baltic;
+    font-size: 3em;
+    font-weight: bolder;
+    color: #402044;
+}
+
+.d-hotel-type
+{
+    width: 100%;
+    font-family: Arial Baltic;
+    font-size: 2em;
+    font-weight: bolder;
+    color: Gray;
+    margin-top: 15px;
+}
+
+.d-hotel-rating
+{
+    width: 100%;
+    margin-top: 15px;
+}
+
+

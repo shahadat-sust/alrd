@@ -1,0 +1,101 @@
+﻿.b-room-name
+{
+    font-family: Arial Baltic;
+    font-size: 2em;
+    font-weight: bolder;
+    color: #402044;
+}
+
+.b-room-type
+{
+    font-family: Arial Baltic;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: Gray;
+}
+
+.b-room-rent
+{
+    font-family: Arial Baltic;
+    font-size: 2em;
+    font-weight: bolder;
+    color: #eea904;
+    float:right;
+}
+.b-room-rent-title
+{
+    font-family: Arial Baltic;
+    font-size: 2em;
+    font-weight: bolder;
+    color: #402044;
+    float:right;
+}
+
+.b-room-discount
+{
+    font-family: Arial Baltic;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: #eea904;
+    float:right;
+}
+.b-room-discount-title
+{
+    font-family: Arial Baltic;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: #402044;
+    float:right;
+}
+
+.b-floor-no
+{
+    width: 100%;
+    font-family: Arial Baltic;
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+.open-block, .blocked-block, .booked-block, .sold-block, .pending-block
+{
+    width: 18%;
+    float: left;
+    font-family: Arial Baltic;
+    font-weight: bolder;
+    padding: 5px 0px;
+    margin: 3px;
+    text-align: center;
+    color: #eea904;
+}
+.open-block
+{
+    background-color: green;
+}
+
+input.open-block
+{
+    cursor: pointer;
+}
+
+.blocked-block
+{
+    background-color: red;
+}
+.booked-block
+{
+    background-color: Purple;
+}
+.sold-block
+{
+    background-color: #402044;
+}
+.pending-block
+{
+    background-color: Navy;
+}
+
+.check-in-date
+{
+    color: #402044;
+    font-weight:bolder;
+}

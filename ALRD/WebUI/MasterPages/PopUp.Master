@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PopUp.Master.cs" Inherits="WebUI.MasterPages.PopUp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Trip In BD</title>
+        <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+            <%: System.Web.Optimization.Styles.Render("~/Content/themes/base", "~/Styles") %>
+            <%: System.Web.Optimization.Scripts.Render("~/Scripts") %>
+        </asp:PlaceHolder>
+  
+        
+        <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    
+        </asp:ContentPlaceHolder>
+</head>
+<body class="theme-bg-popup">
+    <form id="mainForm" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <div id="bContents" class="main-content-popup">
+        <div id="pContentWrapper" class="c-wrapper">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                
+                </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

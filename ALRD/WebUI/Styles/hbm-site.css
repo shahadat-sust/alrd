@@ -1,0 +1,131 @@
+/* 
+    Document   : css-reset
+    Created on : July 28, 2013, 11:26:51 AM
+    Author     : Shahadat Hossain
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@charset "UTF-8";	
+				
+/*[ Reset all default Tag Selector's ]*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td 
+{
+        margin		: 0;
+        padding		: 0;
+        border		: 0;
+        outline		: 0;
+        font-weight	: inherit;
+        font-style	: inherit;
+        font-size	: 100%;
+        font-family	: inherit;
+        vertical-align	: baseline;
+        z-index         : 0;
+}
+
+html, body
+{
+        height		: 100%;			
+}
+
+body 
+{
+        background	: #ffffff;
+        color		: #000000;
+        font		: normal 13px "Roboto Regular", Helvetica, sans-serif;		
+
+        width		: 100%;
+        height		: 100%;	
+
+        text-align	: left; 	
+        margin		: 0px auto;	
+}
+
+/*[ Bold Text ]*/
+strong { font-weight: bold; }
+/*[ Style For Anchor Links ]*/			
+a:link, a:visited { color:#3b5998; text-decoration: none; }		
+a:hover, a:focus { color:#eea904; text-decoration:none; }
+/*[ Emphasise ]*/
+em { font-style: italic; }
+/*[ Style For Text Paragraph ]*/		
+p { margin:0 auto 10px auto; padding:0px; text-align:left; }
+/*[ Style For Order/Unorder List Elements ]*/
+ul, ul li {	list-style:none; text-align:left; }		
+ol, ol li {	list-style:decimal; text-align:left; }		
+/*[ Style For Image ]*/
+img { float:none; border:0px; }
+/*[ Style For Table Header ]*/
+caption, th, td { text-align: left; font-weight: normal; }		
+table { border-collapse: separate; border-spacing: 0; }		
+/*[ Style For Form Elements ]*/
+form, input
+{
+        margin:0px; padding:0px; border : 0; 			
+}
+
+input[type="text"], input[type="password"]
+{
+    border : 1px solid gray;
+    height : 30px;
+    padding: 3px;
+}
+textarea
+{
+    border : 1px solid gray;
+    min-height : 30px !important;
+    padding: 5px;
+}
+select
+{
+    border : 1px solid gray;
+    /*background : transparent;*/
+    padding: 7px;
+    line-height: 1;
+    border-radius: 0;
+    height : 40px !important;
+}
+option
+{
+    height : 30px !important;
+    vertical-align : middle !important;
+    padding-top : 10px;
+}
+input[type="checkbox"], input[type="radio"]
+{
+    margin-right: 10px;
+}
+
+.report input[type="text"]
+{
+    height : 12px !important;
+}
+.report
+{
+    z-index : 0 !important;
+}
+
+/*[ Style For Quote ]*/
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }		
+blockquote, q { quotes: "" ""; }
+/*[ Style For getfocus ]*/
+:focus{ outline: 0; }
+
+/*[ Style For Headings ]*/
+
+h1 { font-size:20px; font-weight:600; }
+h2 { font-size:18px; }
+h3 { font-size:16px; }
+h4 { font-size:14px; }
+h5 { font-size:12px; }		
+h6 { font-size:11px; }
+
+/* [ End Reset ] */	
+

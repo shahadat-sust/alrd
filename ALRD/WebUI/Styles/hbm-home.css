@@ -1,0 +1,172 @@
+﻿.so-content { 
+    background-color: #9ebddb;
+    font: normal 1em/1.5em "Roboto Regular", "Trebuchet MS", Helvetica, sans-serif;
+    color: #5d564c;
+    padding: 0px;    
+    /*height:400px;*/
+    min-height:565px;
+    width : 100%;
+}
+
+.h-search
+{
+    background-color:#ffffff;
+    width:34% !important;
+    /*height: 380px;*/
+    min-height:425px;
+    float :left;
+    margin: 10px 5px 10px 10px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.o-list
+{
+    background-color:#ffffff;
+    width:62% !important;
+    /*height: 380px;*/
+    min-height:425px;
+    float :left;
+    margin: 10px 10px 10px 8px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.home-text-content, .home-text-hotel
+{
+    background-color:#ffffff;
+    float :left;
+    text-align : justify;
+    margin: 3px 10px 10px 10px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.home-text-content
+{
+    width:97.5% !important;
+}
+
+.home-text-hotel
+{
+    width:96.5% !important;
+}
+
+.home-text-content span p {
+    margin: 0 !important;
+    padding: 0px 15px !important;
+    text-align: justify;
+}
+
+.search-title
+{
+    padding : 10px 0px 0px 10px;
+    font-weight : bolder;
+    font-size : 15px;
+    font-family : Arial;
+    
+    height: 30px;
+    background-color: #DCE9F9;   
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.search-field{ width:93%; padding:20px;}
+.offer-list{ width:93%; padding:20px;}
+
+.s-checktime
+{
+    background:url(../images/icon-calender.png) no-repeat right transparent;
+     z-index:2;
+}
+
+.s-checktime input
+{
+    background: transparent;
+}
+
+.offer-value li{ padding: 0px 10px 5px 10px;}
+
+.offer-name a
+{
+    font-family: Arial Baltic;
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: #402044;
+}
+
+.p-hotel-name
+{
+    font-family: Arial Baltic;
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: #402044;
+}
+
+.p-hotel-type
+{
+    font-family: Arial Baltic;
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: #9EBDDB;
+}
+
+ul.pager-holder li { display:inline; float:left; border-right: 1px solid #CCCCCC; background-color: #F1F5F8; min-height: 300px}
+
+
+.swControls{
+	/*position:absolute;*/
+	position:relative;
+	margin-top:10px;
+	text-align: center;
+}
+
+a.swShowPage{
+
+	/* The links that initiate the page slide */
+
+	background-color:#444444;
+	float:left;
+	height:15px;
+	margin:4px 3px;
+	text-indent:-9999px;
+	width:15px;
+	/*border:1px solid #ccc;*/
+	
+	/* CSS3 rounded corners */
+	
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+}
+
+a.swShowPage:hover,
+a.swShowPage.active{
+	background-color:#2993dd;
+	
+	/*	CSS3 inner shadow */
+	
+	-moz-box-shadow:0 0 7px #1e435d inset;
+	/*-webkit-box-shadow:0 0 7px #1e435d inset;*/
+	box-shadow:0 0 7px #1e435d inset;
+}
+
+.main-search-for-hotel input[type="text"], .main-search-for-hotel select
+{
+    border : 2px solid #9ebddb;
+}
+
+
+
+
+
+

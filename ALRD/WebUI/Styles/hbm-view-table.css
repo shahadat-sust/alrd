@@ -1,0 +1,151 @@
+.iTable
+{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width : 100%;
+    border: 0 none !important;
+}
+.iTable td
+{
+    border: 0 none !important;
+    min-height:20px;
+    padding: 5px 0px; 
+    vertical-align: middle;
+}
+
+.pTable
+{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width : 100%;
+    border: 0 none !important;
+}
+
+.pTable th
+{
+    font-family: Arial Baltic;
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: #fff;
+    border: 1px solid #ccc;
+    background-color: #9EBDDB;
+    padding: 10px 10px;
+    text-align: left;
+}
+
+.pTable td
+{
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    text-align: left;
+}
+
+.vTable 
+{
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%; 
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.vTable tr:hover {
+    background: #DCE9F9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.vTable td, .vTable th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.vTable th 
+{
+    font-weight : bold;
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+}
+
+.vTable td:first-child, .vTable th:first-child {
+    border-left: none;
+}
+
+.vTable th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.vTable th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.vTable th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.vTable tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.vTable tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+/*Tabular Data*/
+		
+.table { margin:0 0 0 0; }
+.table tr{ background:#f4f4f4 !important; /* cursor:pointer; */ }
+.table tr.even{ background:#e1e1e1 !important; }
+		
+.table tr th{ background:#9EBDDB; padding:8px 8px 8px 8px; color:#fff !important; border-right:1px solid #fcfcfc; }
+.table tr td { padding:8px 8px 8px 8px; color:#252525 !important; border-right:1px solid #fcfcfc;  word-wrap: break-word; }
+.table tr th:last-child{ border:0 none;}
+.table tr.hver { background:#e8d5f3 !important; }		
+.cell-action { text-align: center; }
+.table tr td input[type="checkbox"], input.checkbox {
+	border: 0 none;
+	margin: 0 5px 0 0;
+	min-height: inherit !important;
+	padding: 0;
+	width: auto !important;
+}
+		
+.table tr td.tab2 span { padding: 0 0 0 20px; }
+.table tr td.tab3 span { padding: 0 0 0 40px; }
+.table tr td.tab4 span { padding: 0 0 0 60px; }
+.table tr td span.active { color: #669900; }
+.table tr td span.inactive { color: #CC0000; }
+.table tr td span.deleted { color: #FF0000; }
+.table .center { text-align: center;}
+.table .left { text-align: left;}
+.table .right { text-align: right;}

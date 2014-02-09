@@ -1,0 +1,33 @@
+/* 
+    Document   : ie7
+    Created on : May 7, 2013, 11:39:56 AM    
+*/
+
+/*###[ Main Navigation ]###*/
+
+.m-ginfo {    
+    background-position: 30px 26px;
+}
+.m-tyofcare {
+    background-position: 30px 26px;    
+}
+.m-support {
+    background-position: 30px 26px;
+}
+.m-sforcare {
+    background-position: 30px 26px;
+}
+
+/*[ Forget Password ]*/
+.login-frm > div.f-pass-wrp > a {      
+    line-height: 0.6em; 
+}
+
+/*[ Home Side Bar Tab Content ]*/
+
+.tab-section .textbox input[type="text"], 
+.tab-section .textbox input[type="password"],
+.section .textbox input[type="text"], 
+.section .textbox input[type="password"]{ 
+    line-height: 40px;
+}

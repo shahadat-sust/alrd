@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{435668D5-4940-4C08-9C33-F4913881F67D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HBM.Service</RootNamespace>
+    <AssemblyName>HBM.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ALRD_DivisionInfoService.cs" />
+    <Compile Include="Service\ALRD_OrganizationDataService.cs" />
+    <Compile Include="Service\ALRD_OrganizationInfoService.cs" />
+    <Compile Include="Service\ALRD_UnionInfoService.cs" />
+    <Compile Include="Service\ALRD_UpazilaInfoService.cs" />
+    <Compile Include="Service\ALRD_UserInfoService.cs" />
+    <Compile Include="Service\ALRD_DistrictInfoService.cs" />
+    <Compile Include="Service\ALRD_SecurityMenuService.cs" />
+    <Compile Include="Service\ALRD_SecurityRoleDetailService.cs" />
+    <Compile Include="Service\ALRD_SecurityRoleService.cs" />
+    <Compile Include="Service\ALRD_SecurityUserService.cs" />
+    <Compile Include="Service\ALRD_SecurityUserRoleMappingService.cs" />
+    <Compile Include="Service\ALRD_SecurityFormService.cs" />
+    <Compile Include="Service\ALRD_GovernmentForestryBodyDataService.cs" />
+    <Compile Include="Service\ALRD_GovernmentKhasLandDataService.cs" />
+    <Compile Include="Service\ALRD_GovernmentWaterBodyDataService.cs" />
+    <Compile Include="Service\Extension_ReportService.cs" />
+    <Compile Include="Service\Extension_CommonService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Dao\SH.Dao.csproj">
+      <Project>{67A5AC8B-D42C-4E47-A730-20009DC9A6F4}</Project>
+      <Name>SH.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\SH.Entity.csproj">
+      <Project>{61FBB370-C812-4CC8-A9B8-37BF71198D8C}</Project>
+      <Name>SH.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,136 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
+
+.main-nav {
+	width: 100%;
+	padding: 0; 
+	margin: 0; 
+	border: 0;
+	background: #3b5998;/*#2B2033*/
+	border-bottom: 4px solid #9ebddb;
+	font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
+	font-size: 12px;
+}
+.main-nav a { 
+	display: block; 
+	line-height: 1em; 
+	text-decoration: none; 
+	background: #3b5998;
+	color: #CBCBCB;
+	padding: 0 20px;
+}
+.main-nav ul, .main-nav li {
+	list-style: none; 
+	margin: 0; 
+	padding: 0;
+}
+.main-nav ul {
+	position: relative; 
+	z-index: 597; 
+	text-transform: uppercase;
+}
+.main-nav ul li { 
+	float: left; 
+	min-height: 1px; 
+	vertical-align: middle;
+}
+.main-nav ul li.hover, .main-nav ul li:hover {
+	position: relative; 
+	z-index: 599; 
+	cursor: default;
+}
+.main-nav ul ul {
+	visibility: hidden; 
+	position: absolute; 
+	top: 100%; 
+	left: 0; 
+	z-index: 598; 
+	width: 100%;
+}
+.main-nav ul ul li {
+	float: none;
+}
+.main-nav ul ul ul {
+	top: 0; 
+	left: auto; 
+	right: -99.5%; 
+	border-top: 0 none;
+}
+.main-nav ul li:hover > ul { 
+	visibility: visible;
+}
+.main-nav ul ul {
+	bottom: 0; 
+	margin-top: 0;
+	left: 0;
+	border-top: 4px solid #9ebddb;
+	text-transform: none;
+	min-width: 190px; 
+}
+.main-nav ul ul li {
+	font-weight: normal;
+	position: relative;
+}
+.main-nav ul ul a {
+	background: #9ebddb;
+	color: #FFF;/*#0082E7*/
+	border: 1px solid #3b5998;
+	border-top: 0 none;
+	line-height: 150%;
+	padding: 16px 20px; 
+}
+
+
+.main-nav > ul { 
+	*display: inline-block; 
+}
+.main-nav:after, .main-nav ul:after {
+	content: '';
+	display: block;
+	clear: both; 
+}
+
+.main-nav > ul > li > a { 
+	line-height: 48px;  
+}
+
+.main-nav ul ul li:first-child > a { 
+	border-top: 1px solid #3b5998; 
+}
+.main-nav ul ul li:hover > a { 
+	background: #35a6ff; 
+}
+
+.main-nav ul ul li:last-child > a {
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0 1px 0 #9ebddb; 
+}
+.main-nav ul ul li:last-child:hover > a { 
+	border-radius: 0 0 0 3px; 
+}
+
+.main-nav ul ul li.has-sub > a:after {
+	content: '+';
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	margin-top: -8px;
+ }
+.main-nav ul li:hover > a, .main-nav ul li.active > a {
+	background: #9ebddb;
+	color: #FFF;
+ }
+.main-nav ul li.has-sub > a:after {
+	content: '+';
+	margin-left: 5px; 
+}
+.main-nav ul li.last ul {
+	left: auto;
+	right: 0; 
+}
+.main-nav ul li.last ul ul {
+	left: auto;
+	right: 99.5%;
+ }
+
+

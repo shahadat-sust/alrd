@@ -1,0 +1,12 @@
+G:\Projects\ALRD\Dao\bin\Debug\HBM.Dao.dll
+G:\Projects\ALRD\Dao\bin\Debug\HBM.Dao.pdb
+G:\Projects\ALRD\Dao\bin\Debug\HBM.Entity.dll
+G:\Projects\ALRD\Dao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+G:\Projects\ALRD\Dao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+G:\Projects\ALRD\Dao\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+G:\Projects\ALRD\Dao\bin\Debug\Microsoft.Practices.Unity.dll
+G:\Projects\ALRD\Dao\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+G:\Projects\ALRD\Dao\bin\Debug\HBM.Entity.pdb
+G:\Projects\ALRD\Dao\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\ALRD\Dao\obj\Debug\HBM.Dao.dll
+G:\Projects\ALRD\Dao\obj\Debug\HBM.Dao.pdb

@@ -1,0 +1,2 @@
+Mailing Started at 9/17/2013 12:24:06 AM
+jhon.snow@yopmail.com The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Must issue a STARTTLS command first. w6sm32731164pbt.32 - gsmtp, :False

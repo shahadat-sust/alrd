@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebUI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ActivationMailSubject" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Activate Your HBM Account</Value>
+    </Setting>
+    <Setting Name="ActivationMailBody" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">
+          Dear User,
+
+          To active your HBM acount, please click this activation link.
+
+          http://localhost:10000/eRecruitment/Pages/WPActivateAccount.aspx?key={key}
+
+          With Regards
+          HBM Admin
+        </Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

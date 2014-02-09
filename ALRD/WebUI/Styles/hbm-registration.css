@@ -1,0 +1,47 @@
+﻿.reg-title-container
+{
+    font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 2.5em;
+    background-color: #9EBDDB;
+    color: #FFFFFF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.reg-footer-container
+{
+    background-color: #9EBDDB;
+    color: #FFFFFF;
+    height: 50px;
+    padding: 10px 50px 10px 0px;
+    text-align: right;
+}
+.reg-form-container
+{
+    padding: 20px;
+    min-height: 500px;
+}
+
+.reg-input-title
+{
+    font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
+    font-size: 2em;
+    color: #3B5998;
+    text-align: left;
+    height: 30px;
+    margin: 15px 0px;
+    border-bottom: 3px #9EBDDB solid;    
+}
+.reg-form-container > .iTable tr td
+{
+    font-size: 1.1em;
+    font-family: "Roboto Regular", "Trebuchet MS", Helvetica, sans-serif;
+}
+.reg-success-msg
+{
+    width : 100%;
+    padding : 40px 20px;
+    font-size: 1.1em;
+    font-family: "Roboto Regular", "Trebuchet MS", Helvetica, sans-serif;
+}

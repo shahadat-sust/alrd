@@ -1,0 +1,5 @@
+G:\Projects\ALRD\Entity\bin\Debug\HBM.Entity.dll
+G:\Projects\ALRD\Entity\bin\Debug\HBM.Entity.pdb
+G:\Projects\ALRD\Entity\obj\Debug\ResolveAssemblyReference.cache
+G:\Projects\ALRD\Entity\obj\Debug\HBM.Entity.dll
+G:\Projects\ALRD\Entity\obj\Debug\HBM.Entity.pdb

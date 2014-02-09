@@ -1,0 +1,28 @@
+/* 
+    Document   : ie8
+    Created on : May 7, 2013, 11:40:04 AM    
+*/
+
+/*###[ Main Navigation ]###*/
+
+.m-ginfo {    
+    background-position: 30px 18px;
+}
+.m-tyofcare {
+    background-position: 30px 18px;    
+}
+.m-support {
+    background-position: 30px 18px;
+}
+.m-sforcare {
+    background-position: 30px 18px;
+}
+
+/*[ Home Side Bar Tab Content ]*/
+
+.tab-section .textbox input[type="text"], 
+.tab-section .textbox input[type="password"],
+.section .textbox input[type="text"], 
+.section .textbox input[type="password"]{ 
+    line-height: 40px;
+}

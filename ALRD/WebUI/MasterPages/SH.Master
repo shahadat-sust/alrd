@@ -1,0 +1,210 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SH.Master.cs" Inherits="WebUI.MasterPages.SH" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ALRD</title>
+        <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+            <%: System.Web.Optimization.Styles.Render("~/Content/themes/base", "~/Styles") %>
+            <%: System.Web.Optimization.Scripts.Render("~/Scripts") %>
+        </asp:PlaceHolder>
+  
+        
+        <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    
+        </asp:ContentPlaceHolder>
+</head>
+<body class="theme-bg">
+<form id="mainForm" runat="server">
+     <div id="pHeader" class="header">
+        <%
+            if (WebUI.HelperClass.GlobalClass.IsLogin)
+            {
+        %>
+                <div id="topNavNLogout" class="navn-logout" >
+                    <div class="nav-wrp">
+                        <ul id="Ul1" class="topnav">
+                            <li><a id="A5" runat="server" href="#" title="">Support</a></li>
+                            <li><a id="A6" runat="server" href="#" title="">FAQs</a></li>
+                            <li><a id="A7" runat="server" href="#" title="">About</a></li>
+                            <li class="no-sp"><a id="A9" runat="server" href="~/Logout.aspx" title="">Log Out</a></li>
+                            <li class="u-logout"><a id="A8" href="#" title="">Hello! <span><asp:Label ID="lblLoginName" runat="server" /></span></a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                
+        <%
+            }
+            else
+            {
+        %>
+                <div id="topNavNLogin" class="navn-login" >
+                    <div class="nav-wrp">
+                        <ul id="topNav" class="topnav">
+                            <li><a id="A1" runat="server" href="#" title="">Support</a></li>
+                            <li><a id="A2" runat="server" href="#" title="">FAQs</a></li>
+                            <li class="no-sp"><a id="A3" runat="server" href="#" title="">About</a></li>
+                            <li class="u-login"><a id="loginFrmKey" href="#" title="">Hello! <span>LOGIN</span></a></li>
+                        </ul>
+                        <div id="loginFrm" class="login-frm">
+                            <div class="u-name-wrp header-input-field">
+                                <asp:TextBox ID="txtUseName" runat="server" title="Username"  MaxLength="150"/>
+                            </div>
+                            <div class="u-pass-wrp header-input-field">
+                                <asp:TextBox ID="txtPassword" CssClass="loginkeytop" TextMode="Password" title="Password" runat="server" MaxLength="150"/>
+                            </div>
+                            <div id="btnGo" class="go-btn-wrp">
+                                <asp:Button ID="btnGoLogin" runat="server" OnClick="btnGoLogin_Click"/>
+                            </div>
+                            <div class="f-pass-wrp">
+                                <a id="btnFoPssNId" href="" title="">Forgot Username or Password?</a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+        <%
+            }
+        %>
+        <div class="webRoot" style="display:none;"><%= System.Configuration.ConfigurationManager.AppSettings["webRoot"] %></div>
+    </div>
+    
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <div id="bContents" class="main-content">
+        <div id="pContentWrapper" class="c-wrapper">
+                <div id="mainNav" class="main-nav">
+	              <ul>
+		             <li class='HOME active'><a  runat="server" href="~/Default.aspx">Home</a></li>
+                     <li id="mnuGOVERNMENT" runat="server" class='GOVERNMENT has-sub '><a href='#'>Govt. Data</a>
+			            <ul>
+                           <li id="submnuGovtKhasLand" runat="server"><a id="lnkGovtKhasLand" runat="server" href="~/Pages/Admin/GovernmentKhasLandDataList.aspx">Govt. Khas Land</a></li>
+                           <li id="submnuGovtWaterBody" runat="server"><a id="lnkGovtWaterBody" runat="server" href="~/Pages/Admin/GovernmentWaterBodyDataList.aspx">Govt. Water Body</a></li>
+                           <li id="submnuGovtForestryBody" runat="server"><a id="lnkGovtForestryBody" runat="server" href="~/Pages/Admin/GovernmentForestryBodyDataList.aspx">Govt. Forestry Body</a></li>
+			            </ul>
+		             </li>
+                     <li id="mnuORGANIZATION" runat="server" class='ORGANIZATION'><a id="A4" runat="server" href="~/Pages/Admin/OrganizationDataList.aspx" >Org. Data</a></li>
+                     <li id="mnuSETUP" runat="server" class='SETUP has-sub '><a href='#'>Setup</a>
+			            <ul>
+                           <li id="submnuOrganization" runat="server"><a id="lnkOrganization" runat="server" href="~/Pages/Admin/OrganizationInfo.aspx">Organization</a></li>
+                           <li id="submnuDivision" runat="server"><a id="lnkDivision" runat="server" href="~/Pages/Admin/DivisionInfo.aspx">Division</a></li>
+                           <li id="submnuDistrict" runat="server"><a id="lnkDistrict" runat="server" href="~/Pages/Admin/DistrictInfo.aspx">District</a></li>
+                           <li id="submnuUpazilla" runat="server"><a id="lnkUpazilla" runat="server" href="~/Pages/Admin/UpazilaInfo.aspx">Upazilla</a></li>
+                           <li id="submnuUnion" runat="server"><a id="lnkUnion" runat="server" href="~/Pages/Admin/UnionInfo.aspx">Union</a></li>
+			            </ul>
+		             </li>
+                     <li id="mnuReport" runat="server" class='REPORT has-sub '><a href='#'>Report</a>
+                        <ul>
+                            <li id="mnuReport1" runat="server" class='has-sub '><a href='#'>Distributed Kash Land</a>
+                                <ul>
+                                    <li id="submnuDivisionWiseDistributedKashLand" runat="server"><a id="lnkDivisionWiseDistributedKashLand" runat="server" href="~/Reporting/Pages/DivisionWiseDistributedKashLand.aspx">Division Wise Distributed Kash Land</a></li>
+                                    <li id="submnuDistrictWiseDistributedKashLand" runat="server"><a id="lnkDistrictWiseDistributedKashLand" runat="server" href="~/Reporting/Pages/DistrictWiseDistributedKashLand.aspx">District Wise Distributed Kash Land</a></li>
+                                    <li id="submnuUpazilaWiseDistributedKashLand" runat="server"><a id="lnkUpazilaWiseDistributedKashLand" runat="server" href="~/Reporting/Pages/UpazilaWiseDistributedKashLand.aspx">Upazila Wise Distributed Kash Land</a></li>                                                     
+                                </ul>
+                            </li>
+                            <li id="mnuReport2" runat="server" class='has-sub '><a href='#'>Khas Land</a>
+                                <ul>
+                                    <li id="submnuUnionWiseKhasLand" runat="server"><a id="lnkUnionWiseKhasLand" runat="server" href="~/Reporting/Pages/UnionWiseKhasLand.aspx">Khas Land</a></li>
+                                   <li id="submnuUnionWiseKhasLandByRange" runat="server"><a id="lnkUnionWiseKhasLandByRange" runat="server" href="~/Reporting/Pages/UnionWiseKhasLandByRange.aspx">Khas Land By Range</a></li>
+                                   <li id="submnuUnionWiseKhasLandAsPerResearchStudyAssumption" runat="server"><a id="lnkUnionWiseKhasLandAsPerResearchStudyAssumption" runat="server" href="~/Reporting/Pages/UnionWiseKhasLandAsPerResearchStudyAssumption.aspx">Khas Land (As Per Research/ Study/ Assumption)</a></li>
+                                   <li id="submnuUnionWiseKhasLandAsPerResearchStudyAssumptionByRange" runat="server"><a id="lnkUnionWiseKhasLandAsPerResearchStudyAssumptionByRange" runat="server" href="~/Reporting/Pages/UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.aspx">Khas Land By Range (As Per Research/ Study/ Assumption)</a></li>                           
+                                </ul>
+                            </li>
+                            <li id="mnuReport3" runat="server" class='has-sub '><a href='#'>Landless Family</a>
+                                <ul>
+                                    <li id="submnuUnionWiseLandlessFamily" runat="server"><a id="lnkUnionWiseLandlessFamily" runat="server" href="~/Reporting/Pages/UnionWiseLandlessFamily.aspx">Landless Family</a></li>
+                                   <li id="submnuUnionWiseLandlessFamilyByRange" runat="server"><a id="lnkUnionWiseLandlessFamilyByRange" runat="server" href="~/Reporting/Pages/UnionWiseLandlessFamilyByRange.aspx">Landless Family By Range</a></li>
+                                   <li id="submnuUnionWiseLandlessFamilyInitiatives" runat="server"><a id="lnkUnionWiseLandlessFamilyInitiatives" runat="server" href="~/Reporting/Pages/UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.aspx">Landless Family & Initiatives</a></li>
+                                   <li id="submnuUnionWiseLandlessFamilyInitiativesByRange" runat="server"><a id="lnkUnionWiseLandlessFamilyInitiativesByRange" runat="server" href="~/Reporting/Pages/UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.aspx">Landless Family & Initiatives By Range</a></li>
+                                </ul>
+                            </li>
+                            <li id="mnuReport4" runat="server" class='has-sub '><a href='#'>Water Body</a>
+                                <ul>
+                                    <li id="submnuUnionWiseWaterBody" runat="server"><a id="lnkUnionWiseWaterBody" runat="server" href="~/Reporting/Pages/UnionWiseWaterBody.aspx">Water Body</a></li>
+                                   <li id="submnuUnionWiseWaterBodyByRange" runat="server"><a id="lnkUnionWiseWaterBodyByRange" runat="server" href="~/Reporting/Pages/UnionWiseWaterBodyByRange.aspx">Water Body By Range</a></li>
+                                   <li id="submnuUnionWiseWaterBodyAsPerResearchStudyAssumption" runat="server"><a id="lnkUnionWiseWaterBodyAsPerResearchStudyAssumption" runat="server" href="~/Reporting/Pages/UnionWiseWaterBodyAsPerResearchStudyAssumption.aspx">Water Body (As Per Research/ Study/ Assumption)</a></li>
+                                   <li id="submnuUnionWiseWaterBodyAsPerResearchStudyAssumptionByRange" runat="server"><a id="lnkUnionWiseWaterBodyAsPerResearchStudyAssumptionByRange" runat="server" href="~/Reporting/Pages/UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.aspx">Water Body By Range (As Per Research/ Study/ Assumption)</a></li>                          
+                                </ul>
+                            </li>
+                            <li id="mnuReport5" runat="server" class='has-sub '><a href='#'>Other Reports</a>
+                                <ul>
+                                    <li id="submnuUnionWiseStatusOfLandUse" runat="server"><a id="lnkUnionWiseStatusOfLandUse" runat="server" href="~/Reporting/Pages/UnionWiseStatusOfLandUse.aspx">Status Of Land Use</a></li>
+                                    <li id="submnuUnionWiseStatusOfLandUseByRange" runat="server"><a id="lnkUnionWiseStatusOfLandUseByRange" runat="server" href="~/Reporting/Pages/UnionWiseStatusOfLandUseByRange.aspx">Status Of Land Use By Range</a></li>                           
+                                    <li id="submnuUnionWiseFisherFolkFamilyCoparativesInitiatives" runat="server"><a id="lnkUnionWiseFisherFolkFamilyCoparativesInitiatives" runat="server" href="~/Reporting/Pages/UnionWiseFisherFolkFamilyCoparativesInitiatives.aspx">Fisher Folk Family, Coparatives & Initiatives</a></li>
+                                    <li id="submnuUnionWiseFisherFolkFamilyCoparativesInitiativesByRange" runat="server"><a id="lnkUnionWiseFisherFolkFamilyCoparativesInitiativesByRange" runat="server" href="~/Reporting/Pages/UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.aspx">Fisher Folk Family, Coparatives & Initiatives By Range</a></li>                          
+                                    <li id="submnuUnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand" runat="server"><a id="lnkUnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand" runat="server" href="~/Reporting/Pages/UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.aspx">Convert Agri. Land To Commercial Land</a></li>
+                                    <li id="submnuUnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange" runat="server"><a id="lnkUnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange" runat="server" href="~/Reporting/Pages/UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.aspx">Convert Agri. Land To Commercial Land By Range</a></li>		                
+                                </ul>
+                            </li>
+                        </ul>
+                     </li>
+                     <li id="mnuSECURITY" runat="server" visible="false" class='SECURITY has-sub '><a href='#'>Security</a>
+			            <ul>
+                           <li id="submnuSecurityRoleType" runat="server"><a id="lnkSecurityRoleType" runat="server" href="~/Pages/Admin/SecurityRole.aspx">Role Type</a></li>
+                           <li id="submnuSecurityUserList" runat="server"><a id="lnkSecurityUserList" runat="server" href="~/Pages/Admin/SecurityUserList.aspx">User List</a></li>
+                           <li id="submnuSecurityRoleDetail" runat="server"><a id="lnkSecurityRoleDetail" runat="server" href="~/Pages/Admin/SecurityRoleDetail.aspx">Form & Role Mapping</a></li>
+			            </ul>
+		             </li>
+		             <li class='ABOUT'><a runat="server" href="#" >About</a></li>
+		             <li class='CONTACT'><a runat="server" href="#" >Contact</a></li>
+	              </ul>
+	            </div>
+                
+                <script type="text/javascript">
+
+                    var webRoot = '<%= System.Configuration.ConfigurationManager.AppSettings["webRoot"] %>';
+                    
+                    var halfsc = $(window).height() / 2;
+                    var halfh = 25;
+
+                    var halfscrn = screen.width / 2;
+                    var halfobj = 25;
+
+                    var goRight = halfscrn - halfobj;
+                    var goBottom = halfsc - halfh;
+
+                    var ajaxloadright = halfscrn - 36;
+
+                    Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(function () {
+                        try {
+                            $.blockUI({
+                                css: {
+                                    width: '66px',
+                                    height: '66px',
+                                    left: '47%',
+                                    border: '0px solid transparent',
+                                    backgroundColor: 'transparent'
+                                },
+                                message: '<img src="../../images/ajax-loader.gif" />'
+                            });
+                        }
+                        catch (e)
+		                { }
+                    });
+                    Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                        try {
+                            $.unblockUI();
+                        }
+                        catch (e)
+		                { }
+
+		            });
+
+                </script>
+
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                
+                </asp:ContentPlaceHolder>
+            </div>
+    </div>
+
+    <div id="pFooter" class="footer">
+         <div class="f-content">
+         
+         </div>
+    </div>
+    </form>
+</body>
+</html>

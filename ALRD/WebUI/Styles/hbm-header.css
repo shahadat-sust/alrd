@@ -1,0 +1,132 @@
+/* 
+    Document   : mcc-header.css
+    Created on : July 28, 2013, 11:27:31 AM    
+*/
+
+/*[ Header Container ]*/
+.header { 
+    position: relative;
+    
+    width: 940px;
+    height: 150px;
+     /* Positioning center */
+    margin: 0 auto;
+    padding: 0 20px;     
+}
+
+.home-header{
+    position: absolute;
+    left: 0;
+    right: 0; 
+    
+    z-index: 5;
+}
+
+/*[ Site Logo ]*/
+.logo {
+    position: absolute;
+    top: 0px; left: 20px;    
+    margin: 30px 0 0 0;
+    /*[ Z index ]*/
+    z-index: 1;
+}
+/*[ Top Navigation Container ]*/
+.navn-logout{
+    position: absolute;
+    top: 0px; right: 10px;        
+    width: 600px;       
+    background: url(../images/top-nav-shadow.png) no-repeat right bottom;    
+    padding: 0px 10px 10px 8px;
+    z-index: 1;
+}
+.navn-login{
+    position: absolute;
+    top: 0px; right: 10px;        
+    width: 440px; /* 455px; */        
+    background: url(../images/top-nav-shadow.png) no-repeat right bottom;    
+    /*[ Space fo shadow  ]*/
+    padding: 0px 10px 10px 8px;
+    /*[ Z index ]*/
+    z-index: 1;
+}
+.nav-wrp{
+   background-color: #3b5998;
+   border: 0 none;
+   padding: 0; margin: 0;
+   clear: both;
+}
+/*[ Top Navigation ]*/
+ul.topnav { clear: both;  }
+/*[ To Navigation Item ]*/
+ul.topnav > li { float: left; background:#3b5998 url(../images/top-nav-sp.jpg) no-repeat right center; }
+/* Remove separator */
+ul.topnav > li.no-sp { background: #3b5998; }
+/* Navigation Links */
+ul.topnav > li > a { text-align: center; font-size: 12px; display: block; padding: 12px 21px 12px 20px; }
+ul.topnav > li > a:link, ul.topnav > li > a:visited { color: #fff; }
+ul.topnav > li > a:hover, ul.topnav > li > a:focus { color: #eea904; }
+/* Login form button */
+ul.topnav > li.u-login { float: right; background: #9ebddb; text-align: center; width: 155px; border: 0 none  }
+ul.topnav > li.u-login > a { color: #fff; }
+ul.topnav > li.u-login > a > span { padding-left: 16px; background: url(../images/login-frm-key.png) no-repeat 3px -14px; text-transform: uppercase; }
+ul.topnav > li.u-login > a > span.on { background: url(../images/login-frm-key.png) no-repeat 3px 3px; }
+
+/* Logout form button */
+ul.topnav > li.u-logout { float: right; background: #9ebddb; text-align: center; width: 268px; border: 0 none  }
+ul.topnav > li.u-logout > a { color: #fff; }
+ul.topnav > li.u-logout > a > span { padding-left: 16px; background: url(../images/login-frm-key.png) no-repeat 3px -14px; }
+ul.topnav > li.u-logout > a > span.on { background: url(../images/login-frm-key.png) no-repeat 3px 3px; }
+
+
+/*[ Top login form ]*/
+.login-frm {
+    display: block;
+    background-color: #3b5998; 
+    width: 416px;
+    height: 26px;
+    padding: 10px 12px 12px;
+    clear: both;
+}
+.login-frm input[type="text"],.login-frm input[type="password"]
+{
+    height: 15px !important;
+    padding: 0px;
+    font-size: 12px;
+    color: #fff;
+    background: transparent;
+    width: 100%;
+}
+
+.login-frm > div {    
+    float: left;    
+    margin: 0px 6px 0 0; 
+}
+/*[  ]*/
+.login-frm > div.u-pass-wrp, .login-frm > div.u-name-wrp {
+    background-color: #9EBDDB;
+    border: 1px solid #382529;
+    width: 124px;
+    height: 16px;
+    padding: 4px 4px;
+    margin: 1px 6px 0 0;
+}
+
+.header-input-field input
+{
+    border: 0 !important;
+}
+
+/*[ Go Button ]*/
+.go-btn-wrp { width: 32px; height: 32px; }
+.go-btn-wrp > a { display: block; height: 100%; }
+.go-btn-wrp > a:link, .go-btn-wrp > a:visited { background: url(../images/go-button.png) no-repeat 0 -2px; }
+.go-btn-wrp > a:hover, .go-btn-wrp > a:focus { background: url(../images/go-button-hover.png) no-repeat 0 -2px; }
+
+/*[ Forget Password ]*/
+.login-frm > div.f-pass-wrp { width: 85px; margin: 0 0 0 0;  }
+.login-frm > div.f-pass-wrp > a { font-size: 11px; color: #fff; font-style: italic; line-height: 1.1em; }
+.login-frm > div.f-pass-wrp > a:link, .login-frm > div.f-pass-wrp > a:visited { color: #fff; }
+.login-frm > div.f-pass-wrp > a:hover, .login-frm > div.f-pass-wrp > a:focus { color: #402044; text-decoration: underline; }
+
+.go-btn-wrp > input[type="submit"] { background: url(../images/go-button.png) no-repeat 0 -2px;width: 30px;height: 30px;cursor:pointer; }
+.go-btn-wrp > input[type="submit"]:hover, .go-btn-wrp > input[type="submit"]:focus { background: url(../images/go-button-hover.png) no-repeat 0 -2px; }

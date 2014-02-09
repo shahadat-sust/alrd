@@ -1,0 +1,119 @@
+/* 
+    Document   : mcc-gen-content
+    Created on : July 28, 2013, 11:28:03 AM    
+*/
+
+.main-content{
+    background: url(../images/pg-content-shadow.png) repeat-y center 8px;     
+    width: 940px;
+    /*min-height: calc(100% - 210px);*/
+    min-height : 760px;
+    margin: 0 auto;
+    padding: 0 20px;    
+}
+
+main-content-popup
+{
+    background: url(../images/pg-content-shadow.png) repeat-y center 0px;     
+    min-height : 600px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.c-wrapper{
+    background: url(../images/pg-header-1.png) no-repeat right 8px;
+}
+.page-title {    
+    border-bottom: 1px solid #d4d4d2;
+    height: 40px;    
+    padding: 20px 20px 20px 20px; 
+}
+.page-title h1 {
+    color: #9ebddb;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 2.8em;
+    text-transform: uppercase;
+    line-height: 0.9em;
+}
+.page-title h1 strong {
+    font-weight: bold;
+}
+.content { 
+    background-color: #fff;
+    font: normal 1em/1.5em "Roboto Regular", "Trebuchet MS", Helvetica, sans-serif;
+    color: #5d564c;
+    
+    padding: 10px  10px  10px  10px;    
+}
+
+
+/*[ bold text inside any page body ]*/
+.content strong { font-weight: 600; }
+/*[ Paragraph inside any page body ]*/
+.content p { }
+/*[ Unordered inside any page body ]*/
+.content ul {
+   padding: 0 1em 1em 1em; 
+}
+/*[ list inside any page body ]*/
+.content ul li {
+    list-style: disc outside none; 
+    margin: 0 0 0 1em;
+}
+/*[ Site Footer]*/
+.footer  
+{
+    clear: both;
+    background-color: #3b5998; 
+    height: 60px; 
+    text-align: center; 
+    color: #fff; 
+    /*position: fixed;
+    bottom: 0;
+    width: 100%;*/
+}
+.footer .f-content { 
+    margin: 0 auto; 
+    padding: 25px 0 0 0; 
+    width: 940px;  
+}
+
+.footer-lnk
+{
+	color: #FFF !important;
+	border-right: 1px solid #EEA904;
+	line-height: 30px;
+	padding: 0px 5px;
+}
+
+.footer-lnk:hover,.footer-lnk:focus
+{
+	color: #EEA904 !important;
+}
+
+.pnlError { 
+    background-color: #fff;
+    font: normal 1em/1.5em "Roboto Regular", "Trebuchet MS", Helvetica, sans-serif;
+    color: #5d564c;
+    padding: 10px  20px  0px  20px;    
+}
+
+.labelException
+{
+    color:Red;
+}
+
+.labelResult
+{
+    color:Green;
+}
+
+.setup-content
+{
+    background-color:#ffffff;
+    width:67% !important;
+    float :left;
+    padding: 10px 10px 10px 10px;
+}
+

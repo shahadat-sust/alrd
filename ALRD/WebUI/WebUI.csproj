@@ -1,0 +1,1563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78E3F1DF-6306-4217-8E95-ADF2883927F0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebUI</RootNamespace>
+    <AssemblyName>WebUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CKEditor.NET">
+      <HintPath>..\lib4.0\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\lib4.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\lib4.0\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\lib4.0\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft Visual Studio 10.0\ReportViewer\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft Visual Studio 10.0\ReportViewer\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\lib4.0\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="WebGrease">
+      <HintPath>..\lib4.0\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.timepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Controls\Admin\GovernmentForestryBodyData.ascx" />
+    <Content Include="Controls\Admin\GovernmentForestryBodyDataList.ascx" />
+    <Content Include="Controls\Admin\GovernmentWaterBodyData.ascx" />
+    <Content Include="Controls\Admin\GovernmentWaterBodyDataList.ascx" />
+    <Content Include="Controls\Admin\GovernmentKhasLandData.ascx" />
+    <Content Include="Controls\Admin\GovernmentKhasLandDataList.ascx" />
+    <Content Include="Controls\Admin\OrganizationDataList.ascx" />
+    <Content Include="Controls\Admin\SecurityRole.ascx" />
+    <Content Include="Controls\Admin\SecurityRoleDetail.ascx" />
+    <Content Include="Controls\Admin\SecurityUserInfo.ascx" />
+    <Content Include="Controls\Admin\SecurityUserList.ascx" />
+    <Content Include="Controls\Admin\UpazilaInfo.ascx" />
+    <Content Include="Controls\Admin\UnionInfo.ascx" />
+    <Content Include="Controls\Admin\DistrictInfo.ascx" />
+    <Content Include="Controls\Admin\DivisionInfo.ascx" />
+    <Content Include="Controls\Consumer\ErrorPage.ascx" />
+    <Content Include="Controls\Consumer\Home.ascx" />
+    <Content Include="Controls\Admin\OrganizationInfo.ascx" />
+    <Content Include="Controls\Admin\OrganizationData.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\0star.png" />
+    <Content Include="Images\invoice.png" />
+    <Content Include="Images\1star.png" />
+    <Content Include="Images\2star.png" />
+    <Content Include="Images\3star.png" />
+    <Content Include="Images\4star.png" />
+    <Content Include="Images\5star.png" />
+    <Content Include="Images\aAdd.png" />
+    <Content Include="Images\aAdd_17.png" />
+    <Content Include="Images\aDelete.png" />
+    <Content Include="Images\aDelete_17.png" />
+    <Content Include="Images\aEdit.png" />
+    <Content Include="Images\aEdit_17.png" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\ajax-loader1.gif" />
+    <Content Include="Images\ajax-loader3.gif" />
+    <Content Include="Images\ajax-loader4.gif" />
+    <Content Include="Images\banner_1.jpg" />
+    <Content Include="Images\banner_2.jpg" />
+    <Content Include="Images\banner_3.jpg" />
+    <Content Include="Images\bar-1.png" />
+    <Content Include="Images\bar-2.png" />
+    <Content Include="Images\cal.png" />
+    <Content Include="Images\checked.png" />
+    <Content Include="Images\check_out_in-1.png" />
+    <Content Include="Images\check_out_in-2.png" />
+    <Content Include="Images\currency_exchange-1.png" />
+    <Content Include="Images\currency_exchange-2.png" />
+    <Content Include="Images\default.jpg" />
+    <Content Include="Images\down_arrow_select.jpg" />
+    <Content Include="Images\gallery-arrows.png" />
+    <Content Include="Images\go-button-hover.png" />
+    <Content Include="Images\go-button-org.png" />
+    <Content Include="Images\go-button.png" />
+    <Content Include="Images\gym-1.png" />
+    <Content Include="Images\gym-2.PNG" />
+    <Content Include="Images\hint-pointer.gif" />
+    <Content Include="Images\home-footer-bg.png" />
+    <Content Include="Images\icon-back-previous.png" />
+    <Content Include="Images\icon-calender.png" />
+    <Content Include="Images\icon-menu-caresearch.png" />
+    <Content Include="Images\icon-menu-geninfo-36px.png" />
+    <Content Include="Images\icon-menu-geninfo.png" />
+    <Content Include="Images\icon-menu-support-36px.png" />
+    <Content Include="Images\icon-menu-support.png" />
+    <Content Include="Images\icon-menu-tyofcare-36px.png" />
+    <Content Include="Images\icon-menu-tyofcare.png" />
+    <Content Include="Images\internat-1.png" />
+    <Content Include="Images\internat-2.png" />
+    <Content Include="Images\login-frm-key.png" />
+    <Content Include="Images\main-nav-sp.jpg" />
+    <Content Include="Images\mcc-checkbox.png" />
+    <Content Include="Images\mcc-logo1.jpg" />
+    <Content Include="Images\mcc-logo1.png" />
+    <Content Include="Images\medical-1.png" />
+    <Content Include="Images\medical-2.png" />
+    <Content Include="Images\noimage.jpg" />
+    <Content Include="Images\parking-1.png" />
+    <Content Include="Images\parking-2.png" />
+    <Content Include="Images\pg-content-shadow.png" />
+    <Content Include="Images\pg-header-1.png" />
+    <Content Include="Images\pg-header-profile.jpg" />
+    <Content Include="Images\pg-header-search-for-care.png" />
+    <Content Include="Images\restaurant-1.png" />
+    <Content Include="Images\restaurant-2.png" />
+    <Content Include="Images\slide1.jpg" />
+    <Content Include="Images\slide2.jpg" />
+    <Content Include="Images\slide3.jpg" />
+    <Content Include="Images\star.jpg" />
+    <Content Include="Images\swimming-1.png" />
+    <Content Include="Images\swimming-2.png" />
+    <Content Include="Images\theme-bg.jpg" />
+    <Content Include="Images\top-nav-shadow.png" />
+    <Content Include="Images\top-nav-sp.jpg" />
+    <Content Include="Images\travel-1.png" />
+    <Content Include="Images\travel-2.png" />
+    <Content Include="Images\unchecked.png" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Pages\Admin\GovernmentWaterBodyData.aspx" />
+    <Content Include="Pages\Admin\GovernmentWaterBodyDataList.aspx" />
+    <Content Include="Pages\Admin\GovernmentKhasLandData.aspx" />
+    <Content Include="Pages\Admin\GovernmentKhasLandDataList.aspx" />
+    <Content Include="Pages\Admin\GovernmentForestryBodyData.aspx" />
+    <Content Include="Pages\Admin\GovernmentForestryBodyDataList.aspx" />
+    <Content Include="Pages\Admin\OrganizationDataList.aspx" />
+    <Content Include="Pages\Admin\SecurityRole.aspx" />
+    <Content Include="Pages\Admin\SecurityRoleDetail.aspx" />
+    <Content Include="Pages\Admin\SecurityUserInfo.aspx" />
+    <Content Include="Pages\Admin\SecurityUserList.aspx" />
+    <Content Include="Pages\Admin\DistrictInfo.aspx" />
+    <Content Include="Pages\Admin\DivisionInfo.aspx" />
+    <Content Include="Pages\Admin\UnionInfo.aspx" />
+    <Content Include="Pages\Admin\UpazilaInfo.aspx" />
+    <Content Include="Pages\Admin\OrganizationData.aspx" />
+    <Content Include="Pages\Admin\OrganizationInfo.aspx" />
+    <Content Include="Pages\Consumer\ErrorPage.aspx" />
+    <Content Include="Reporting\Controls\UpazilaWiseDistributedKashLand.ascx" />
+    <Content Include="Reporting\Controls\DistrictWiseDistributedKashLand.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseStatusOfLandUse.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseStatusOfLandUseByRange.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseFisherFolkFamilyCoparativesInitiatives.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseWaterBodyAsPerResearchStudyAssumption.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseWaterBody.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseWaterBodyByRange.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseLandlessFamily.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseLandlessFamilyByRange.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseKhasLandAsPerResearchStudyAssumption.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseKhasLand.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseKhasLandByRange.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.ascx" />
+    <Content Include="Reporting\Controls\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.ascx" />
+    <Content Include="Reporting\Controls\DivisionWiseDistributedKashLand.ascx" />
+    <Content Include="Reporting\Controls\ReportViewer.ascx" />
+    <Content Include="Reporting\Pages\UpazilaWiseDistributedKashLand.aspx" />
+    <Content Include="Reporting\Pages\DistrictWiseDistributedKashLand.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseStatusOfLandUse.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseStatusOfLandUseByRange.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseFisherFolkFamilyCoparativesInitiatives.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseWaterBodyAsPerResearchStudyAssumption.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseWaterBody.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseWaterBodyByRange.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseLandlessFamily.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseLandlessFamilyByRange.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseKhasLandAsPerResearchStudyAssumption.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseKhasLand.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseKhasLandByRange.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.aspx" />
+    <Content Include="Reporting\Pages\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.aspx" />
+    <Content Include="Reporting\Pages\DivisionWiseDistributedKashLand.aspx" />
+    <Content Include="Scripts\browser.js" />
+    <Content Include="Scripts\ckeditor\adapters\jquery.js" />
+    <Content Include="Scripts\ckeditor\CHANGES.html" />
+    <Content Include="Scripts\ckeditor\ckeditor.js" />
+    <Content Include="Scripts\ckeditor\ckeditor_basic.js" />
+    <Content Include="Scripts\ckeditor\config.js" />
+    <Content Include="Scripts\ckeditor\contents.css" />
+    <Content Include="Scripts\ckeditor\images\spacer.gif" />
+    <Content Include="Scripts\ckeditor\INSTALL.html" />
+    <Content Include="Scripts\ckeditor\lang\af.js" />
+    <Content Include="Scripts\ckeditor\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\lang\bn.js" />
+    <Content Include="Scripts\ckeditor\lang\bs.js" />
+    <Content Include="Scripts\ckeditor\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\lang\da.js" />
+    <Content Include="Scripts\ckeditor\lang\de.js" />
+    <Content Include="Scripts\ckeditor\lang\el.js" />
+    <Content Include="Scripts\ckeditor\lang\en-au.js" />
+    <Content Include="Scripts\ckeditor\lang\en-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\lang\en.js" />
+    <Content Include="Scripts\ckeditor\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\lang\es.js" />
+    <Content Include="Scripts\ckeditor\lang\et.js" />
+    <Content Include="Scripts\ckeditor\lang\eu.js" />
+    <Content Include="Scripts\ckeditor\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\lang\fo.js" />
+    <Content Include="Scripts\ckeditor\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\lang\he.js" />
+    <Content Include="Scripts\ckeditor\lang\hi.js" />
+    <Content Include="Scripts\ckeditor\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\lang\id.js" />
+    <Content Include="Scripts\ckeditor\lang\is.js" />
+    <Content Include="Scripts\ckeditor\lang\it.js" />
+    <Content Include="Scripts\ckeditor\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\lang\ka.js" />
+    <Content Include="Scripts\ckeditor\lang\km.js" />
+    <Content Include="Scripts\ckeditor\lang\ko.js" />
+    <Content Include="Scripts\ckeditor\lang\lt.js" />
+    <Content Include="Scripts\ckeditor\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\lang\mn.js" />
+    <Content Include="Scripts\ckeditor\lang\ms.js" />
+    <Content Include="Scripts\ckeditor\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\lang\no.js" />
+    <Content Include="Scripts\ckeditor\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\lang\sr-latn.js" />
+    <Content Include="Scripts\ckeditor\lang\sr.js" />
+    <Content Include="Scripts\ckeditor\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\lang\th.js" />
+    <Content Include="Scripts\ckeditor\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\lang\_languages.js" />
+    <Content Include="Scripts\ckeditor\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\LICENSE.html" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Scripts\ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Scripts\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Scripts\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="Scripts\ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="Scripts\ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="Scripts\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="Scripts\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Scripts\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="Scripts\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="Scripts\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="Scripts\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Scripts\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Scripts\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="Scripts\ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\preview\preview.html" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Scripts\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="Scripts\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Scripts\ckeditor\plugins\xml\plugin.js" />
+    <Content Include="Scripts\ckeditor\skins\kama\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\kama\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\kama\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="Scripts\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="Scripts\ckeditor\skins\kama\skin.js" />
+    <Content Include="Scripts\ckeditor\skins\kama\templates.css" />
+    <Content Include="Scripts\ckeditor\skins\office2003\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\office2003\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\office2003\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="Scripts\ckeditor\skins\office2003\skin.js" />
+    <Content Include="Scripts\ckeditor\skins\office2003\templates.css" />
+    <Content Include="Scripts\ckeditor\skins\v2\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\v2\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\v2\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="Scripts\ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="Scripts\ckeditor\skins\v2\skin.js" />
+    <Content Include="Scripts\ckeditor\skins\v2\templates.css" />
+    <Content Include="Scripts\ckeditor\themes\default\theme.js" />
+    <Content Include="Scripts\custom\Home.js" />
+    <Content Include="Scripts\custom\HotelDetailInfo.js" />
+    <Content Include="Scripts\custom\HotelSearch.js" />
+    <Content Include="Scripts\gallery.js" />
+    <Content Include="Scripts\GoogleMap.js" />
+    <Content Include="Scripts\jPager.js" />
+    <Content Include="Scripts\lib\autoNumeric-1.7.4.js" />
+    <Content Include="Scripts\lib\date.js" />
+    <Content Include="Scripts\lib\EditableComboBox.js" />
+    <Content Include="Scripts\lib\jquery-1.9.1.js" />
+    <Content Include="Scripts\lib\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\lib\jquery-migrate-1.1.0.js" />
+    <Content Include="Scripts\lib\jquery-ui-1.9.2.js" />
+    <Content Include="Scripts\lib\jquery-ui-1.9.2.min.js" />
+    <Content Include="Scripts\lib\jquery.animate-enhanced.min.js" />
+    <Content Include="Scripts\lib\jquery.blockUI.js" />
+    <Content Include="Scripts\lib\jquery.debug.js" />
+    <Content Include="Scripts\lib\jquery.easing.1.3.js" />
+    <Content Include="Scripts\lib\jquery.maskedinput.js" />
+    <Content Include="Scripts\lib\jquery.searchabledropdown-1.0.8.min.js" />
+    <Content Include="Scripts\lib\jquery.searchabledropdown-1.0.8.src.js" />
+    <Content Include="Scripts\lib\jquery.superslides.js" />
+    <Content Include="Scripts\lib\jquery.superslides.min.js" />
+    <Content Include="Scripts\lib\jquery.ui.timepicker.js" />
+    <Content Include="Scripts\lib\slides.css" />
+    <Content Include="Scripts\lib\slides.js" />
+    <Content Include="Scripts\hbm-home.js" />
+    <Content Include="Scripts\hbm-main-nav.js" />
+    <Content Include="Scripts\hbm-top-login.js" />
+    <Content Include="Scripts\lib\text_hint.js" />
+    <Content Include="Scripts\lib\TimePicker.js" />
+    <Content Include="Scripts\popup.js" />
+    <Content Include="Scripts\uivalidation.js" />
+    <Content Include="Scripts\util.js" />
+    <Content Include="Images\arrow.png" />
+    <Content Include="Images\darkdenim3.png" />
+    <Content Include="Images\dark_leather.png" />
+    <Content Include="Services\HBMService.asmx" />
+    <Content Include="Styles\hbm-report.css" />
+    <Content Include="Styles\hbm-gallery.css" />
+    <Content Include="Styles\hbm-hetel-booking.css" />
+    <Content Include="Styles\hbm-search.css" />
+    <Content Include="Styles\hbm-home.css" />
+    <Content Include="Styles\hbm-timepicker.css" />
+    <Content Include="Styles\hbm-datepicker.css" />
+    <Content Include="Styles\hbm-cfonts.css" />
+    <Content Include="Styles\hbm-mainNav.css" />
+    <Content Include="Styles\hbm-side-nav.css" />
+    <Content Include="Styles\hbm-site.css" />
+    <Content Include="Styles\hbm-view-table.css" />
+    <Content Include="Styles\hbm-hotel-info.css" />
+    <Content Include="Styles\ie7.css" />
+    <Content Include="Styles\ie8.css" />
+    <Content Include="Styles\ie9.css" />
+    <Content Include="Styles\hbm-common.css" />
+    <Content Include="Styles\hbm-gen-content.css" />
+    <Content Include="Styles\hbm-header.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Styles\hbm-registration.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BundleConfig.cs" />
+    <Compile Include="Controls\Admin\GovernmentForestryBodyData.ascx.cs">
+      <DependentUpon>GovernmentForestryBodyData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\GovernmentForestryBodyData.ascx.designer.cs">
+      <DependentUpon>GovernmentForestryBodyData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\GovernmentForestryBodyDataList.ascx.cs">
+      <DependentUpon>GovernmentForestryBodyDataList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\GovernmentForestryBodyDataList.ascx.designer.cs">
+      <DependentUpon>GovernmentForestryBodyDataList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\GovernmentWaterBodyData.ascx.cs">
+      <DependentUpon>GovernmentWaterBodyData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\GovernmentWaterBodyData.ascx.designer.cs">
+      <DependentUpon>GovernmentWaterBodyData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\GovernmentWaterBodyDataList.ascx.cs">
+      <DependentUpon>GovernmentWaterBodyDataList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\GovernmentWaterBodyDataList.ascx.designer.cs">
+      <DependentUpon>GovernmentWaterBodyDataList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\GovernmentKhasLandData.ascx.cs">
+      <DependentUpon>GovernmentKhasLandData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\GovernmentKhasLandData.ascx.designer.cs">
+      <DependentUpon>GovernmentKhasLandData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\GovernmentKhasLandDataList.ascx.cs">
+      <DependentUpon>GovernmentKhasLandDataList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\GovernmentKhasLandDataList.ascx.designer.cs">
+      <DependentUpon>GovernmentKhasLandDataList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\OrganizationDataList.ascx.cs">
+      <DependentUpon>OrganizationDataList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\OrganizationDataList.ascx.designer.cs">
+      <DependentUpon>OrganizationDataList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\SecurityRole.ascx.cs">
+      <DependentUpon>SecurityRole.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\SecurityRole.ascx.designer.cs">
+      <DependentUpon>SecurityRole.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\SecurityRoleDetail.ascx.cs">
+      <DependentUpon>SecurityRoleDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\SecurityRoleDetail.ascx.designer.cs">
+      <DependentUpon>SecurityRoleDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\SecurityUserInfo.ascx.cs">
+      <DependentUpon>SecurityUserInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\SecurityUserInfo.ascx.designer.cs">
+      <DependentUpon>SecurityUserInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\SecurityUserList.ascx.cs">
+      <DependentUpon>SecurityUserList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\SecurityUserList.ascx.designer.cs">
+      <DependentUpon>SecurityUserList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\UpazilaInfo.ascx.cs">
+      <DependentUpon>UpazilaInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\UpazilaInfo.ascx.designer.cs">
+      <DependentUpon>UpazilaInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\UnionInfo.ascx.cs">
+      <DependentUpon>UnionInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\UnionInfo.ascx.designer.cs">
+      <DependentUpon>UnionInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\DistrictInfo.ascx.cs">
+      <DependentUpon>DistrictInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\DistrictInfo.ascx.designer.cs">
+      <DependentUpon>DistrictInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\DivisionInfo.ascx.cs">
+      <DependentUpon>DivisionInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\DivisionInfo.ascx.designer.cs">
+      <DependentUpon>DivisionInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Consumer\ErrorPage.ascx.cs">
+      <DependentUpon>ErrorPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Consumer\ErrorPage.ascx.designer.cs">
+      <DependentUpon>ErrorPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Consumer\Home.ascx.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Consumer\Home.ascx.designer.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\OrganizationInfo.ascx.cs">
+      <DependentUpon>OrganizationInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\OrganizationInfo.ascx.designer.cs">
+      <DependentUpon>OrganizationInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\OrganizationData.ascx.cs">
+      <DependentUpon>OrganizationData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\OrganizationData.ascx.designer.cs">
+      <DependentUpon>OrganizationData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClass\BaseControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HelperClass\clsStringEnc.cs" />
+    <Compile Include="HelperClass\CommonFunctions.cs" />
+    <Compile Include="HelperClass\FileWriter.cs" />
+    <Compile Include="HelperClass\GlobalClass.cs" />
+    <Compile Include="HelperClass\ImageUtil.cs" />
+    <Compile Include="HelperClass\MailSender.cs" />
+    <Compile Include="HelperClass\NumberToWordConverter.cs" />
+    <Compile Include="HelperClass\ReportEntityClass.cs" />
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\PopUp.Master.cs">
+      <DependentUpon>PopUp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\PopUp.Master.designer.cs">
+      <DependentUpon>PopUp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\SH.Master.cs">
+      <DependentUpon>SH.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\SH.Master.designer.cs">
+      <DependentUpon>SH.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentWaterBodyData.aspx.cs">
+      <DependentUpon>GovernmentWaterBodyData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentWaterBodyData.aspx.designer.cs">
+      <DependentUpon>GovernmentWaterBodyData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentWaterBodyDataList.aspx.cs">
+      <DependentUpon>GovernmentWaterBodyDataList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentWaterBodyDataList.aspx.designer.cs">
+      <DependentUpon>GovernmentWaterBodyDataList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentKhasLandData.aspx.cs">
+      <DependentUpon>GovernmentKhasLandData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentKhasLandData.aspx.designer.cs">
+      <DependentUpon>GovernmentKhasLandData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentKhasLandDataList.aspx.cs">
+      <DependentUpon>GovernmentKhasLandDataList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentKhasLandDataList.aspx.designer.cs">
+      <DependentUpon>GovernmentKhasLandDataList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentForestryBodyData.aspx.cs">
+      <DependentUpon>GovernmentForestryBodyData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentForestryBodyData.aspx.designer.cs">
+      <DependentUpon>GovernmentForestryBodyData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentForestryBodyDataList.aspx.cs">
+      <DependentUpon>GovernmentForestryBodyDataList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\GovernmentForestryBodyDataList.aspx.designer.cs">
+      <DependentUpon>GovernmentForestryBodyDataList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\OrganizationDataList.aspx.cs">
+      <DependentUpon>OrganizationDataList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\OrganizationDataList.aspx.designer.cs">
+      <DependentUpon>OrganizationDataList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\SecurityRole.aspx.cs">
+      <DependentUpon>SecurityRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\SecurityRole.aspx.designer.cs">
+      <DependentUpon>SecurityRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\SecurityRoleDetail.aspx.cs">
+      <DependentUpon>SecurityRoleDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\SecurityRoleDetail.aspx.designer.cs">
+      <DependentUpon>SecurityRoleDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\SecurityUserInfo.aspx.cs">
+      <DependentUpon>SecurityUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\SecurityUserInfo.aspx.designer.cs">
+      <DependentUpon>SecurityUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\SecurityUserList.aspx.cs">
+      <DependentUpon>SecurityUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\SecurityUserList.aspx.designer.cs">
+      <DependentUpon>SecurityUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\DistrictInfo.aspx.cs">
+      <DependentUpon>DistrictInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\DistrictInfo.aspx.designer.cs">
+      <DependentUpon>DistrictInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\DivisionInfo.aspx.cs">
+      <DependentUpon>DivisionInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\DivisionInfo.aspx.designer.cs">
+      <DependentUpon>DivisionInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\UnionInfo.aspx.cs">
+      <DependentUpon>UnionInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\UnionInfo.aspx.designer.cs">
+      <DependentUpon>UnionInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\UpazilaInfo.aspx.cs">
+      <DependentUpon>UpazilaInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\UpazilaInfo.aspx.designer.cs">
+      <DependentUpon>UpazilaInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\OrganizationData.aspx.cs">
+      <DependentUpon>OrganizationData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\OrganizationData.aspx.designer.cs">
+      <DependentUpon>OrganizationData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\OrganizationInfo.aspx.cs">
+      <DependentUpon>OrganizationInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\OrganizationInfo.aspx.designer.cs">
+      <DependentUpon>OrganizationInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Consumer\ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Consumer\ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UpazilaWiseDistributedKashLand.ascx.cs">
+      <DependentUpon>UpazilaWiseDistributedKashLand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UpazilaWiseDistributedKashLand.ascx.designer.cs">
+      <DependentUpon>UpazilaWiseDistributedKashLand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\DistrictWiseDistributedKashLand.ascx.cs">
+      <DependentUpon>DistrictWiseDistributedKashLand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\DistrictWiseDistributedKashLand.ascx.designer.cs">
+      <DependentUpon>DistrictWiseDistributedKashLand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.ascx.cs">
+      <DependentUpon>UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.ascx.designer.cs">
+      <DependentUpon>UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.ascx.cs">
+      <DependentUpon>UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.ascx.designer.cs">
+      <DependentUpon>UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseStatusOfLandUse.ascx.cs">
+      <DependentUpon>UnionWiseStatusOfLandUse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseStatusOfLandUse.ascx.designer.cs">
+      <DependentUpon>UnionWiseStatusOfLandUse.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseStatusOfLandUseByRange.ascx.cs">
+      <DependentUpon>UnionWiseStatusOfLandUseByRange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseStatusOfLandUseByRange.ascx.designer.cs">
+      <DependentUpon>UnionWiseStatusOfLandUseByRange.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseFisherFolkFamilyCoparativesInitiatives.ascx.cs">
+      <DependentUpon>UnionWiseFisherFolkFamilyCoparativesInitiatives.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseFisherFolkFamilyCoparativesInitiatives.ascx.designer.cs">
+      <DependentUpon>UnionWiseFisherFolkFamilyCoparativesInitiatives.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.ascx.cs">
+      <DependentUpon>UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.ascx.designer.cs">
+      <DependentUpon>UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseWaterBodyAsPerResearchStudyAssumption.ascx.cs">
+      <DependentUpon>UnionWiseWaterBodyAsPerResearchStudyAssumption.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseWaterBodyAsPerResearchStudyAssumption.ascx.designer.cs">
+      <DependentUpon>UnionWiseWaterBodyAsPerResearchStudyAssumption.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.ascx.cs">
+      <DependentUpon>UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.ascx.designer.cs">
+      <DependentUpon>UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseWaterBody.ascx.cs">
+      <DependentUpon>UnionWiseWaterBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseWaterBody.ascx.designer.cs">
+      <DependentUpon>UnionWiseWaterBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseWaterBodyByRange.ascx.cs">
+      <DependentUpon>UnionWiseWaterBodyByRange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseWaterBodyByRange.ascx.designer.cs">
+      <DependentUpon>UnionWiseWaterBodyByRange.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseLandlessFamily.ascx.cs">
+      <DependentUpon>UnionWiseLandlessFamily.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseLandlessFamily.ascx.designer.cs">
+      <DependentUpon>UnionWiseLandlessFamily.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseLandlessFamilyByRange.ascx.cs">
+      <DependentUpon>UnionWiseLandlessFamilyByRange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseLandlessFamilyByRange.ascx.designer.cs">
+      <DependentUpon>UnionWiseLandlessFamilyByRange.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseKhasLandAsPerResearchStudyAssumption.ascx.cs">
+      <DependentUpon>UnionWiseKhasLandAsPerResearchStudyAssumption.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseKhasLandAsPerResearchStudyAssumption.ascx.designer.cs">
+      <DependentUpon>UnionWiseKhasLandAsPerResearchStudyAssumption.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.ascx.cs">
+      <DependentUpon>UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.ascx.designer.cs">
+      <DependentUpon>UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseKhasLand.ascx.cs">
+      <DependentUpon>UnionWiseKhasLand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseKhasLand.ascx.designer.cs">
+      <DependentUpon>UnionWiseKhasLand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseKhasLandByRange.ascx.cs">
+      <DependentUpon>UnionWiseKhasLandByRange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseKhasLandByRange.ascx.designer.cs">
+      <DependentUpon>UnionWiseKhasLandByRange.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.ascx.cs">
+      <DependentUpon>UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.ascx.designer.cs">
+      <DependentUpon>UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.ascx.cs">
+      <DependentUpon>UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.ascx.designer.cs">
+      <DependentUpon>UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\DivisionWiseDistributedKashLand.ascx.cs">
+      <DependentUpon>DivisionWiseDistributedKashLand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\DivisionWiseDistributedKashLand.ascx.designer.cs">
+      <DependentUpon>DivisionWiseDistributedKashLand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Controls\ReportViewer.ascx.cs">
+      <DependentUpon>ReportViewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Controls\ReportViewer.ascx.designer.cs">
+      <DependentUpon>ReportViewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UpazilaWiseDistributedKashLand.aspx.cs">
+      <DependentUpon>UpazilaWiseDistributedKashLand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UpazilaWiseDistributedKashLand.aspx.designer.cs">
+      <DependentUpon>UpazilaWiseDistributedKashLand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\DistrictWiseDistributedKashLand.aspx.cs">
+      <DependentUpon>DistrictWiseDistributedKashLand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\DistrictWiseDistributedKashLand.aspx.designer.cs">
+      <DependentUpon>DistrictWiseDistributedKashLand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.aspx.cs">
+      <DependentUpon>UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.aspx.designer.cs">
+      <DependentUpon>UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.aspx.cs">
+      <DependentUpon>UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.aspx.designer.cs">
+      <DependentUpon>UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseStatusOfLandUse.aspx.cs">
+      <DependentUpon>UnionWiseStatusOfLandUse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseStatusOfLandUse.aspx.designer.cs">
+      <DependentUpon>UnionWiseStatusOfLandUse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseStatusOfLandUseByRange.aspx.cs">
+      <DependentUpon>UnionWiseStatusOfLandUseByRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseStatusOfLandUseByRange.aspx.designer.cs">
+      <DependentUpon>UnionWiseStatusOfLandUseByRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseFisherFolkFamilyCoparativesInitiatives.aspx.cs">
+      <DependentUpon>UnionWiseFisherFolkFamilyCoparativesInitiatives.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseFisherFolkFamilyCoparativesInitiatives.aspx.designer.cs">
+      <DependentUpon>UnionWiseFisherFolkFamilyCoparativesInitiatives.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.aspx.cs">
+      <DependentUpon>UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.aspx.designer.cs">
+      <DependentUpon>UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseWaterBodyAsPerResearchStudyAssumption.aspx.cs">
+      <DependentUpon>UnionWiseWaterBodyAsPerResearchStudyAssumption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseWaterBodyAsPerResearchStudyAssumption.aspx.designer.cs">
+      <DependentUpon>UnionWiseWaterBodyAsPerResearchStudyAssumption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.aspx.cs">
+      <DependentUpon>UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.aspx.designer.cs">
+      <DependentUpon>UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseWaterBody.aspx.cs">
+      <DependentUpon>UnionWiseWaterBody.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseWaterBody.aspx.designer.cs">
+      <DependentUpon>UnionWiseWaterBody.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseWaterBodyByRange.aspx.cs">
+      <DependentUpon>UnionWiseWaterBodyByRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseWaterBodyByRange.aspx.designer.cs">
+      <DependentUpon>UnionWiseWaterBodyByRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseLandlessFamily.aspx.cs">
+      <DependentUpon>UnionWiseLandlessFamily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseLandlessFamily.aspx.designer.cs">
+      <DependentUpon>UnionWiseLandlessFamily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseLandlessFamilyByRange.aspx.cs">
+      <DependentUpon>UnionWiseLandlessFamilyByRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseLandlessFamilyByRange.aspx.designer.cs">
+      <DependentUpon>UnionWiseLandlessFamilyByRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseKhasLandAsPerResearchStudyAssumption.aspx.cs">
+      <DependentUpon>UnionWiseKhasLandAsPerResearchStudyAssumption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseKhasLandAsPerResearchStudyAssumption.aspx.designer.cs">
+      <DependentUpon>UnionWiseKhasLandAsPerResearchStudyAssumption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.aspx.cs">
+      <DependentUpon>UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.aspx.designer.cs">
+      <DependentUpon>UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseKhasLand.aspx.cs">
+      <DependentUpon>UnionWiseKhasLand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseKhasLand.aspx.designer.cs">
+      <DependentUpon>UnionWiseKhasLand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseKhasLandByRange.aspx.cs">
+      <DependentUpon>UnionWiseKhasLandByRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseKhasLandByRange.aspx.designer.cs">
+      <DependentUpon>UnionWiseKhasLandByRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.aspx.cs">
+      <DependentUpon>UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.aspx.designer.cs">
+      <DependentUpon>UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.aspx.cs">
+      <DependentUpon>UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.aspx.designer.cs">
+      <DependentUpon>UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Pages\DivisionWiseDistributedKashLand.aspx.cs">
+      <DependentUpon>DivisionWiseDistributedKashLand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\Pages\DivisionWiseDistributedKashLand.aspx.designer.cs">
+      <DependentUpon>DivisionWiseDistributedKashLand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\HBMService.asmx.cs">
+      <DependentUpon>HBMService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CommonControls\" />
+    <Folder Include="OtherControls\" />
+    <Folder Include="Upload\Files\EmailLog\" />
+    <Folder Include="Upload\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dao\SH.Dao.csproj">
+      <Project>{67A5AC8B-D42C-4E47-A730-20009DC9A6F4}</Project>
+      <Name>SH.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\SH.Entity.csproj">
+      <Project>{61FBB370-C812-4CC8-A9B8-37BF71198D8C}</Project>
+      <Name>SH.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\SH.Service.csproj">
+      <Project>{435668D5-4940-4C08-9C33-F4913881F67D}</Project>
+      <Name>SH.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\SH.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\PopUp.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\ckeditor\.htaccess" />
+    <None Include="Scripts\ckeditor\adapters\vssver2.scc" />
+    <None Include="Scripts\ckeditor\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\lang\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\a11yhelp\lang\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\about\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\adobeair\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\ajax\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\autogrow\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\bbcode\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\clipboard\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\colordialog\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\devtools\lang\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\devtools\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\dialog\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\div\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\docprops\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\docprops\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\find\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\flash\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\flash\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\forms\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\forms\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\iframedialog\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\iframe\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\iframe\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\image\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\link\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\link\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\liststyle\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\pagebreak\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\pastefromword\filter\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\pastetext\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\placeholder\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\placeholder\lang\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\placeholder\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\preview\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\scayt\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\showblocks\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\smiley\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\smiley\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\specialchar\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\specialchar\lang\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\stylesheetparser\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\styles\styles\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\tableresize\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\tabletools\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\table\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\templates\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\templates\templates\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\templates\templates\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\uicolor\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\uicolor\lang\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\uicolor\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\uicolor\yui\assets\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\uicolor\yui\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\wsc\dialogs\vssver2.scc" />
+    <None Include="Scripts\ckeditor\plugins\xml\vssver2.scc" />
+    <None Include="Scripts\ckeditor\skins\kama\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\skins\kama\vssver2.scc" />
+    <None Include="Scripts\ckeditor\skins\office2003\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\skins\office2003\vssver2.scc" />
+    <None Include="Scripts\ckeditor\skins\v2\images\vssver2.scc" />
+    <None Include="Scripts\ckeditor\skins\v2\vssver2.scc" />
+    <None Include="Scripts\ckeditor\themes\default\vssver2.scc" />
+    <None Include="Scripts\ckeditor\vssver2.scc" />
+    <None Include="Styles\font\Roboto-Black-webfont.eot" />
+    <None Include="Styles\font\Roboto-Black-webfont.svg" />
+    <None Include="Styles\font\Roboto-Black-webfont.ttf" />
+    <None Include="Styles\font\Roboto-Black-webfont.woff" />
+    <None Include="Styles\font\Roboto-BlackItalic-webfont.eot" />
+    <None Include="Styles\font\Roboto-BlackItalic-webfont.svg" />
+    <None Include="Styles\font\Roboto-BlackItalic-webfont.ttf" />
+    <None Include="Styles\font\Roboto-BlackItalic-webfont.woff" />
+    <None Include="Styles\font\Roboto-Bold-webfont.eot" />
+    <None Include="Styles\font\Roboto-Bold-webfont.svg" />
+    <None Include="Styles\font\Roboto-Bold-webfont.ttf" />
+    <None Include="Styles\font\Roboto-Bold-webfont.woff" />
+    <None Include="Styles\font\Roboto-BoldCondensed-webfont.eot" />
+    <None Include="Styles\font\Roboto-BoldCondensed-webfont.svg" />
+    <None Include="Styles\font\Roboto-BoldCondensed-webfont.ttf" />
+    <None Include="Styles\font\Roboto-BoldCondensed-webfont.woff" />
+    <None Include="Styles\font\Roboto-BoldCondensedItalic-webfont.eot" />
+    <None Include="Styles\font\Roboto-BoldCondensedItalic-webfont.svg" />
+    <None Include="Styles\font\Roboto-BoldCondensedItalic-webfont.ttf" />
+    <None Include="Styles\font\Roboto-BoldCondensedItalic-webfont.woff" />
+    <None Include="Styles\font\Roboto-BoldItalic-webfont.eot" />
+    <None Include="Styles\font\Roboto-BoldItalic-webfont.svg" />
+    <None Include="Styles\font\Roboto-BoldItalic-webfont.ttf" />
+    <None Include="Styles\font\Roboto-BoldItalic-webfont.woff" />
+    <None Include="Styles\font\Roboto-Condensed-webfont.eot" />
+    <None Include="Styles\font\Roboto-Condensed-webfont.svg" />
+    <None Include="Styles\font\Roboto-Condensed-webfont.ttf" />
+    <None Include="Styles\font\Roboto-Condensed-webfont.woff" />
+    <None Include="Styles\font\Roboto-CondensedItalic-webfont.eot" />
+    <None Include="Styles\font\Roboto-CondensedItalic-webfont.svg" />
+    <None Include="Styles\font\Roboto-CondensedItalic-webfont.ttf" />
+    <None Include="Styles\font\Roboto-CondensedItalic-webfont.woff" />
+    <None Include="Styles\font\Roboto-Italic-webfont.eot" />
+    <None Include="Styles\font\Roboto-Italic-webfont.svg" />
+    <None Include="Styles\font\Roboto-Italic-webfont.ttf" />
+    <None Include="Styles\font\Roboto-Italic-webfont.woff" />
+    <None Include="Styles\font\Roboto-Light-webfont.eot" />
+    <None Include="Styles\font\Roboto-Light-webfont.svg" />
+    <None Include="Styles\font\Roboto-Light-webfont.ttf" />
+    <None Include="Styles\font\Roboto-Light-webfont.woff" />
+    <None Include="Styles\font\Roboto-LightItalic-webfont.eot" />
+    <None Include="Styles\font\Roboto-LightItalic-webfont.svg" />
+    <None Include="Styles\font\Roboto-LightItalic-webfont.ttf" />
+    <None Include="Styles\font\Roboto-LightItalic-webfont.woff" />
+    <None Include="Styles\font\Roboto-Medium-webfont.eot" />
+    <None Include="Styles\font\Roboto-Medium-webfont.svg" />
+    <None Include="Styles\font\Roboto-Medium-webfont.ttf" />
+    <None Include="Styles\font\Roboto-Medium-webfont.woff" />
+    <None Include="Styles\font\Roboto-MediumItalic-webfont.eot" />
+    <None Include="Styles\font\Roboto-MediumItalic-webfont.svg" />
+    <None Include="Styles\font\Roboto-MediumItalic-webfont.ttf" />
+    <None Include="Styles\font\Roboto-MediumItalic-webfont.woff" />
+    <None Include="Styles\font\Roboto-Regular-webfont.eot" />
+    <None Include="Styles\font\Roboto-Regular-webfont.svg" />
+    <None Include="Styles\font\Roboto-Regular-webfont.ttf" />
+    <None Include="Styles\font\Roboto-Regular-webfont.woff" />
+    <None Include="Styles\font\Roboto-Regular.ttf" />
+    <None Include="Styles\font\Roboto-Thin-webfont.eot" />
+    <None Include="Styles\font\Roboto-Thin-webfont.svg" />
+    <None Include="Styles\font\Roboto-Thin-webfont.ttf" />
+    <None Include="Styles\font\Roboto-Thin-webfont.woff" />
+    <None Include="Styles\font\Roboto-ThinItalic-webfont.eot" />
+    <None Include="Styles\font\Roboto-ThinItalic-webfont.svg" />
+    <None Include="Styles\font\Roboto-ThinItalic-webfont.ttf" />
+    <None Include="Styles\font\Roboto-ThinItalic-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UpazilaWiseDistributedKashLand.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\RDLC\RPT_DistrictWiseDistributedKashLand.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLand.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseStatusOfAffectedForConvertAgriLandToCommercialLandByRange.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseStatusOfLandUse.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseStatusOfLandUseByRange.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseFisherFolkFamilyCoparativesInitiatives.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseFisherFolkFamilyCoparativesInitiativesByRange.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseWaterBodyAsPerResearchStudyAssumption.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseWaterBodyAsPerResearchStudyAssumptionByRange.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseWaterBody.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseWaterBodyByRange.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseLandlessFamily.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseLandlessFamilyByRange.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseKhasLandAsPerResearchStudyAssumption.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseKhasLandAsPerResearchStudyAssumptionByRange.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseKhasLand.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseKhasLandByRange.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_DivisionWiseDistributedKashLand.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumption.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\RPT_UnionWiseLandlessFamilyInitiativesAsPerResearchStudyAssumptionByRange.rdlc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8061</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
